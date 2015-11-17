@@ -1,0 +1,19 @@
+h3.sign_up {
+  color: blue;
+  font-size: 12px;
+  font-family: sans-serif;
+  float: right;
+}
+
+h3.sign_in {
+  color: blue;
+  font-size: 12px;
+  font-family: sans-serif;
+  float: right;
+}
+
+h3.boundary {
+  color: blue;
+  font-size: 12px;
+  float: right;
+}
