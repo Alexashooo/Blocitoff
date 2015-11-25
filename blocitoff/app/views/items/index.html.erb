@@ -1,0 +1,13 @@
+<h1>This is your list of items:</h1>
+
+<% @items.each do |item| %>
+    <div class="media">
+      <div class="media-body">
+        <small>
+          <%= item.name %>
+        </small
+      </div>
+    </div>
+  <%end%>
+
+<%=link_to "Create a new item", new_user_item_path(@items), class: 'btn btn-success'%>
