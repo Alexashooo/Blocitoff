@@ -1,0 +1,13 @@
+<% @items.each do |item| %>
+
+   <%if item.user_id==current_user.id%>
+       <div class="media">
+           <div class="media-body">
+             <small>
+               <%= item.name %>
+             </small>
+          </div>
+      </div>
+   <%end%>
+   
+<%end%>
