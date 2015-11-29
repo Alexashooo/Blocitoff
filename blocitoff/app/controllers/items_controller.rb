@@ -25,6 +25,22 @@ class ItemsController < ApplicationController
     @item=Item.new
   end
 
-  
+  def destroy
+    @item=Item.find(params[:id])
+
+    if @item.destroy
+      flash[:notice] = "Item was deleted."
+      #redirect_to action: :index
+    else
+      flash[:error] = "Item couldn't be deleted. Try again."
+      #redirect_to action: :index
+    end
+    respond_to do |format|
+         format.html
+         format.js 
+    end
+  end
+
+
 
 end

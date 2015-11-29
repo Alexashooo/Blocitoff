@@ -1,10 +1,12 @@
 <% @items.each do |item| %>
 
-   <%if item.user_id==current_user.id%>
+   <%if item.user_id == current_user.id%>
        <div class="media">
            <div class="media-body">
              <small>
-               <%= item.name %>
+               <%= content_tag :li, id: "item-#{item.id}" do %>
+                 <%= item.name %> <%= link_to "", {:action => 'destroy', :id => item}, method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
+               <% end %>
              </small>
           </div>
       </div>

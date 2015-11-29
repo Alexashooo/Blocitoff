@@ -1,5 +1,5 @@
 <h1>This is your list of items:</h1>
 
-<%= render partial: 'item', locals: { item: @item } %>
+<%= render partial: 'item' %>
 
-<%=link_to "Create a new item", new_user_item_path(@items), class: 'btn btn-success'%>
+<%=link_to "Create a new item", new_user_item_path, class: 'btn btn-success'%>
