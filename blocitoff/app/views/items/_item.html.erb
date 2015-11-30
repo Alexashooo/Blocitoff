@@ -1,11 +1,11 @@
+
 <% @items.each do |item| %>
-   <% from_time=Time.now %>
    <%if item.user_id == current_user.id%>
        <div class="media">
            <div class="media-body">
              <small>
                <%= content_tag :li, id: "item-#{item.id}" do %>
-                 <%= item.name %> <%= link_to "", {:action => 'destroy', :id => item}, method: :delete, remote: true, class: 'glyphicon glyphicon-ok'%> <%=distance_of_time_in_words(from_time, from_time+7.days)%>
+                 <%= item.name %> <%= link_to "", {:action => 'destroy', :id => item}, method: :delete, remote: true, class: 'glyphicon glyphicon-ok'%> <%=distance_of_time_in_words(item.created_at, Time.now,include_seconds: true)%>
                <% end %>
              </small>
           </div>
