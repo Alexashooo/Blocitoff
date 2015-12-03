@@ -1,5 +1,5 @@
-<h1><%=@user.email%></h1>
-<h1><%=@user.created_at%></h1>
- <h1>Name:<%=@user.name%></h1>
+
+ <h4>name: <%=@user.name%></h4>
+ <h5><%=@user.email%></h5>
 
  <%=link_to "My To Do list", user_items_path(@user, @item), class: 'btn btn-success'%>
