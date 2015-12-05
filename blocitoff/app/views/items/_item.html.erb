@@ -1,15 +1,13 @@
 
-<% @items.each do |item| %>
+
    <%if item.user_id == current_user.id%>
        <div class="media">
            <div class="media-body">
              <small>
                <%= content_tag :li, id: "item-#{item.id}" do %>
-                 <%= item.name %> <%= link_to "", {:action => 'destroy', :id => item}, method: :delete, remote: true, class: 'glyphicon glyphicon-ok'%> <%=distance_of_time_in_words(item.created_at, Time.now,include_seconds: true)%>
+                 <%= item.name %> <%= link_to "", [current_user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok'%> <%=distance_of_time_in_words(item.created_at, Time.now,include_seconds: true)%>
                <% end %>
              </small>
           </div>
       </div>
    <%end%>
-
-<%end%>
