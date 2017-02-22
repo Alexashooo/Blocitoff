@@ -53,7 +53,6 @@ ActiveRecord::Schema.define(version: 20151128161834) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "sex"
     t.string   "name"
     t.integer  "item_id"
   end
