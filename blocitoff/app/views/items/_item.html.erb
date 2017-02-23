@@ -1,13 +1,29 @@
 
-
    <%if item.user_id == current_user.id%>
        <div class="media">
            <div class="media-body">
-             <small>
-               <%= content_tag :li, id: "item-#{item.id}" do %>
-                 <%= item.name %> <%= link_to "", [current_user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok'%> <%=distance_of_time_in_words(item.created_at, Time.now,include_seconds: true)%>
-               <% end %>
-             </small>
-          </div>
+              <div class="row">
+                <%= content_tag :li, id: "item-#{item.id}", class: 'list-unstyled' do %>
+                    <strong>
+                      <div class="col-sm-2">
+                        <%= item.name %>
+                      </div>
+                    </strong>
+
+                    <small>
+                      <div class="col-sm-1">
+                       <strong>
+                        <%= link_to "", [current_user, item], method: :delete, remote: true, class: "glyphicon glyphicon-thumbs-up"%>
+                      </strong>
+                      </div>
+                      <div class="col-sm-2">
+                        <%=distance_of_time_in_words(item.created_at, Time.now,include_seconds: true)%> ago
+                      </div>
+                    </small>
+
+                <%end%>
+              </div>
+
       </div>
+
    <%end%>
