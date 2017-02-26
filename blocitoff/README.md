@@ -1,6 +1,6 @@
 <snippet>
   <content>
-# Blocipedia
+# Blocitoff
 This is just one of the most common applications that almost every developer starts with, a to-do list.
 The application shows when an item is created and removes it automatically when time elapsed. It is developed in Rails.
 
